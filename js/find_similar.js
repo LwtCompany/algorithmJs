@@ -4,14 +4,10 @@ function sockMerchant(n, ar) {
     let result = 0;
     for(let i = 0; i < n; i ++){
         for(let j = i+1; j < n; j++){
-            if(ar[j] == ar[i] && i != j && ar[j]){
-                console.log(ar[j], ar[j] + "\n")
-                ar = ar.filter( function(data){
-                  if(data !=ar[i] || data !=ar[j] )
-                    return data;
-                });
+            if(ar[j] == ar[i] && i != j && ar[j] != 0){
+                ar[j] = ar[i] =0;
                 result++;
-                console.log(result)
+                console.log(ar)
                 break;
             }
         }
@@ -20,5 +16,5 @@ function sockMerchant(n, ar) {
     return result;
 }
 
-console.log(sockMerchant(7, [1,5,3,5,5,5,7]));
+console.log(sockMerchant(7, [1,5,3,5,5,5,5,7]));
 
