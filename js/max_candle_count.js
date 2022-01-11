@@ -1,6 +1,6 @@
 function birthdayCakeCandles(candles) {
     let max_value = Math.max(...candles), t = 0;
-    for(i = 0; i < candles.length; i++){
+    for(let i = 0; i < candles.length; i++){
         if(candles[i] == max_value)
             t++;
     }

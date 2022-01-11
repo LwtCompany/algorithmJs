@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    button{
+      height: 48px;
+      width: 75px;
+      font-size: 24px;
+    }
+
+</style>
+<body>
+   
+        <div>
+            <button id="btn1" value="1">1</button>
+            <button id="btn2" value="2">2</button>
+            <button id="btn3" value="3">3</button>
+        </div>
+        <div>
+            <button id="btn4" value="4">4</button>
+            <button onclick="changePosition()" id="btn5">5</button>
+            <button id="btn6" value="6">6</button>
+        </div>
+        <div>
+            <button id="btn7" value="7">7</button>
+            <button id="btn8" value="8">8</button>
+            <button id="btn9" value="9">9</button>
+        </div>
+   
+   
+    <script>
+        let nums=[1,2,3,6,9,8,7,4];
+        const ids=[1,2,3,6,9,8,7,4];
+
+        let btn5=document.getElementById("btn5");
+
+        btn5.onclick=function() {
+            nums.unshift(nums.pop());
+            for (i=0; i<=7; i++) {
+                document.getElementById("btn"+ids[i]).innerHTML=nums[i];
+                console.log(nums[i])
+            }
+        }
+       
+    </script>
+</body>
+</html>
